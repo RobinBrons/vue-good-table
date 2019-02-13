@@ -23,7 +23,8 @@
         class="footer__navigation__page-btn"
         :class="{ disabled: !prevIsPossible }"
         @click.prevent.stop="previousPage"
-        tabindex="0">
+        tabindex="0"
+        role="button">
         <span class="chevron" v-bind:class="{ 'left': !rtl, 'right': rtl }"></span>
         <span>{{prevText}}</span>
       </a>
@@ -37,8 +38,12 @@
         v-if="mode === 'pages'">
       </pagination-page-info>
       <div v-else class="footer__navigation__info">{{paginatedInfo}}</div>
-      <a href="javascript:undefined" class="footer__navigation__page-btn"
-         :class="{ disabled: !nextIsPossible }" @click.prevent.stop="nextPage" tabindex="0">
+      <a href="javascript:undefined" 
+         class="footer__navigation__page-btn"
+         :class="{ disabled: !nextIsPossible }" 
+         @click.prevent.stop="nextPage" 
+         tabindex="0"
+         role="button">
         <span>{{nextText}}</span>
         <span class="chevron" v-bind:class="{ 'right': !rtl, 'left': rtl }"></span>
       </a>

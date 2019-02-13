@@ -6,7 +6,7 @@
     </span>
     <input
       v-if="searchEnabled"
-      type="text"
+      type="search"
       class="vgt-input vgt-pull-left"
       :placeholder="globalSearchPlaceholder"
       :value="value"
